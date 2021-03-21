@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicación Listado de Personas</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body onload="mostrarPersonas()">
+    <div class="contenedor" id="header">
+      <h1>Listado de personas</h1>
+    </div>
+    <div class="contenedor">
+      <h2>Personas</h2>
+      <div class="elemento">
+        <ul id="personas"></ul>
+      </div>
+    </div>
+    <div class="contenedor">
+      <form id="formulario">
+        <input type="text" name="Nombre" id="nombre" placeholder="Nombre" />
+        <input type="text" name="Apellido" id="nombre" placeholder="Apellido" />
+      </form>
+      <div style="text-align: center; display: inline">
+        <button style="cursor: pointer" onclick="agregarPersona()">+</button>
+      </div>
+    </div>
+
+    <script src="js/Persona.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

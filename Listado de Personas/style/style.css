@@ -1,0 +1,90 @@
+html {
+  background-color: #2196f3;
+  min-height: 1000px;
+  font-family: "helvetica neue";
+  background: url(fondo.png), #2196f3;
+  background: url(fondo.png),
+    -webkit-gradient(linear, right top, left top, from(#2196f3), to(#009688));
+  background: url(fondo.png), linear-gradient(to left, #2196f3, #009688);
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.contenedor {
+  text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+#personas {
+  text-align: left;
+}
+#header {
+  background-color: #3f51b5;
+  text-align: center;
+}
+
+.elemento {
+  min-height: 70px;
+  display: flex;
+  align-items: left;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.elemento:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  min-height: 15px;
+  width: 30px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #3f51b5;
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-weight: 200;
+  width: 40%;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #3f51b5;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
