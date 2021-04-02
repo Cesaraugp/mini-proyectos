@@ -1,0 +1,128 @@
+$darkC: hsl(185, 75%, 39%);
+$desaB: hsl(229, 23%, 23%);
+$darkG: hsl(227, 10%, 46%);
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@mixin centered {
+  margin: auto;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+%card {
+  border-radius: 15px;
+}
+%card-section {
+  background-color: white;
+  font-weight: 100;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+%flexify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  background-image: url("../images/bg-pattern-bottom.svg");
+  background-color: hsl(185, 75%, 39%);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 15px;
+  @include centered;
+  background-color: hsl(0, 0%, 99%);
+  width: 24rem;
+}
+.top-card {
+  @extend %card;
+  .profile-photo {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 35%;
+    img {
+      width: 6rem;
+      z-index: 1;
+      margin-top: 50px;
+      text-align: center;
+      border-radius: 50%;
+      border: 8px white solid;
+    }
+  }
+  height: 11rem;
+  width: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bottom-card {
+  @extend %card;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 100%;
+  height: 15rem;
+}
+.info {
+  color: hsl(227, 10%, 46%);
+
+  @extend %card-section;
+  @include centered;
+  .name_age {
+    display: flex;
+    margin-top: 10%;
+    @extend %flexify;
+    font-size: 18px;
+    margin-left: 1.25rem;
+    margin-bottom: -0.6rem;
+    h3 {
+      font-weight: 700;
+      color: rgb(51, 49, 49);
+    }
+    span {
+      margin-left: 1.25rem;
+      color: hsl(227, 10%, 46%);
+      font-weight: 600;
+    }
+    color: hsl(227, 10%, 46%);
+  }
+}
+.metrics {
+  @extend %card-section;
+  @extend %flexify;
+  justify-content: space-evenly;
+  color: $desaB;
+
+  .metrics_info {
+    p {
+      font-size: 11px;
+      margin-top: 0.5rem;
+      letter-spacing: 3px;
+      font-weight: 200;
+      color: gray;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+  }
+  margin-top: 0;
+  background-color: hsl(0, 100%, 99%);
+  height: 40%;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px lightgray solid;
+}
